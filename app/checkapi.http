@@ -1,0 +1,50 @@
+GET http://127.0.0.1:8000/good/find/?key=100
+Accept: application/json
+### 100, spam
+
+###
+### get good by id
+GET http://127.0.0.1:8000/good/6a56de75-7127-4e84-990b-c6b3f5c2a8c8
+Content-Type: application/json
+
+### del good bt id
+DELETE http://127.0.0.1:8000/good/6a56de75-7127-4e84-990b-c6b3f5c2a8c8
+Content-Type: application/json
+
+###
+### update good
+PUT http://127.0.0.1:8000/good/6a56de75-7127-4e84-990b-c6b3f5c2a8c8
+Content-Type: application/json
+
+{
+  "id": "6a56de75-7127-4e84-990b-c6b3f5c2a8c8",
+  "name": "Socks with holes",
+  "price": 5,
+  "qty": 1000
+}
+
+### insert good
+POST http://127.0.0.1:8000/good/
+Content-Type: application/json
+
+{
+  "id": "6a56de75-7127-4e84-990b-c6b3f5c2a8c8",
+  "name": "Socks with holes",
+  "price": 5,
+  "qty": 100
+}
+
+###
+POST http://127.0.0.1:8000/good/
+Content-Type: application/json
+
+{
+"id": "0066edb7-5587-498a-bf66-93ff50b43100",
+"name": "SPAM (with expired date)",
+"price": 1,
+"qty": 100
+}
+
+
+
+

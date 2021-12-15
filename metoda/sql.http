@@ -1,0 +1,9 @@
+POST http://192.168.1.210:9200/_sql/translate
+content-type: application/json; charset=UTF-8
+{
+#"query": "SELECT * FROM stsc ORDER BY id DESC",
+"query": "SHOW TABLES;",
+"fetch_size": 10
+}
+
+###
